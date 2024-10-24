@@ -1,8 +1,9 @@
 .grid{
+    position: relative;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 15%;
-    padding-left: 5%;
-   
+    flex-wrap:wrap;
+    margin-top: 5%;
+    padding: 5%;
+   border: 2px solid black;
 }

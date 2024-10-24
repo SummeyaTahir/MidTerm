@@ -1,13 +1,15 @@
 import React from 'react'
-import "./Films_grid.css";
-import Movie_Card from './Movie_Card';
-function Films_Grid() {
+import "./item.css";
+
+
+function Item_component({object}) {
+
+    
     const Movies_data=[{
         image:"https://tse2.mm.bing.net/th?id=OIP.le_RFyGon3Tpg9M6hzLsIAHaFP&pid=Api&P=0&h=220",
         title:"Slient Voice",
         ReleaseDate:"1-2-2020",
         Rating:5,
-        description:"        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis cumque sequi provident distinctio excepturi quibusdam architecto, ea dolorem, consequuntur aliquam sapiente rem voluptas dignissimos? Vel ullam commodi recusandae harum! Nulla.        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis cumque sequi provident distinctio excepturi quibusdam architecto, ea dolorem, consequuntur aliquam sapiente rem voluptas dignissimos? Vel ullam commodi recusandae harum! Nulla.        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis cumque sequi provident distinctio excepturi quibusdam architecto, ea dolorem, consequuntur aliquam sapiente rem voluptas dignissimos? Vel ullam commodi recusandae harum! Nulla."
     },
         {   image:"https://tse2.mm.bing.net/th?id=OIP.le_RFyGon3Tpg9M6hzLsIAHaFP&pid=Api&P=0&h=220",
             title:"One Piece",
@@ -47,18 +49,21 @@ function Films_Grid() {
                     Rating:5,
                     id:7},
     ]
+   
   return (
-    <>
-       <div>
-      <div className="grid">
-            {Movies_data.map((movie,index) => 
-            (
-              <Movie_Card key="index" object={movie}/>
-            ))}
+    <div>
+      <div id="item_container">
+        <div id="item_image">
+        <img src="{object.image}"/>
+        </div>
+        <div id="item_description">
+            <h1>object.title</h1>
+            {object.description}
+    
+        </div>
       </div>
     </div>
-    </>
   )
 }
 
-export default Films_Grid
+export default Item_component
