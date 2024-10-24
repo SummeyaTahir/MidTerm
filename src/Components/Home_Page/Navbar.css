@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Distributes space between logo and nav items */
+    align-items: center; /* Centers items vertically */
+    height: 12vh; /* Set height of navbar */
+    background: white; /* Background color */
+    position: fixed; /* Fixed position */
+    width: 100%; /* Full width */
+    z-index: 10000; 
+    padding: 0 2rem; 
+    top: 0; 
+}
+
+#navigation1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    flex-wrap: wrap; 
+    font-size: 1.2rem; 
+    justify-content: center; 
+    flex-grow: 1; 
+}
+
+#right_nav_items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap; 
+    font-size: 0.9rem; 
+    justify-content: right; 
+     
+}
+
+li{
+    list-style-type: none; 
+}
+#login_button {
+    display: inline-block; 
+     border:0.1px solid grey;
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin-left: 0.9rem;
+    width: auto;
+    height: auto; 
+    
+}
+
+#Bar
+{
+    width:1rem;
+    height:1rem;
+    padding:5px 10px;
+}
+
+
+
+.nav_li_right a
+{
+    color: black; 
+    text-decoration: none; 
+    font-weight: 400;
+}
+.nav_li,.nav_li_right {
+    list-style-type: none; 
+    margin: 0 0.7rem; 
+    color: black; 
+    text-decoration: none; 
+    border-radius: 20px;
+    border: 2px solid white;
+    padding:5px 10px;
+}
+
+.nav_li a {
+    color: grey;
+    text-decoration: none; 
+    font-weight: 400;
+
+}
+
+#logoname {
+    display: flex; 
+    align-items: center; 
+    color: black;
+    font-size: 1.5rem; 
+    font-weight: 500;
+    cursor:pointer;
+}
+#logoname:hover #movie_logo,
+#logoname:hover #name {
+    color: rgb(211, 22, 22);
+}
+#movie_logo{
+    width: 2.5rem;
+    height: 2.5rem;
+    color: black;
+    
+}
+#name {
+    margin-left: 0.4rem; 
+}
+
+.nav_li:hover,.nav_li_right:hover{
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background: rgba(128, 128, 128,0.1);
+    width: auto;
+    height: auto;
+}
+
+
+.nav_li.active a{
+    background: transparent; 
+   color: black;
+   font-weight: 600;
+  
+}
+.nav_li.active:hover {
+    border: 2px solid transparent;
+    background: transparent; 
+    cursor: default; 
+
+}
+#search{
+    display: inline-block;
+    width:100%;
+    height:40px;
+    padding: 5%;
+    border:2px solid black;
+    border-radius: 25px;
+}
